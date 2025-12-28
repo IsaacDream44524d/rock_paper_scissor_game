@@ -6,7 +6,7 @@ let getHumanChoice = function () {
     if (choices.includes(userChoice)) {
         return userChoice;
     }
-    return "Invalid Option Try Again";
+    
 };
 
 let getComputerChoice = function () {
@@ -21,42 +21,51 @@ function playGame() {
     let computerScore = 0;
 
     function getWinner() {
-        if (humanScore > computerScore) {console.log("You Win The Game, Congratulations.");}
 
-        else if (computerScore > humanScore) {console.log("You lose, Computer Won. Better Luck Next time.");}
+        console.log(`Player score: ${humanScore}`);
+        console.log(`computer score: ${computerScore}`);
 
-        else {console.log("Its a Tie");}
+        if (humanScore > computerScore) { console.log("You Win The Game, Congratulations."); }
+
+        else if (computerScore > humanScore) { console.log("You lose, Computer Won. Better Luck Next time."); }
+
+        else { console.log("Its a Tie"); }
     }
 
     function playRound(humanChoice, computerChoice) {
-        if (humanChoice === computerChoice) {
-            humanScore = 0, computerScore = 0;
-            return "Tie";
-        }
+        if (humanChoice) {
+            if (humanChoice === computerChoice) {
+                return "Tie";
+            }
 
-        else if (
-            (humanChoice === "rock" && computerChoice === "scissor") ||
-            (humanChoice === "scissor" && computerChoice === "paper") ||
-            (humanChoice === "paper" && computerChoice === "rock")
-        ) {
-            humanScore += 1, computerChoice += 0;
-            return "player";
-        }
+            else if (
+                (humanChoice === "rock" && computerChoice === "scissor") ||
+                (humanChoice === "scissor" && computerChoice === "paper") ||
+                (humanChoice === "paper" && computerChoice === "rock")
+            ) {
+                humanScore++;
+                return "player";
+            }
 
-        else {
-            computerScore += 1, humanScore += 0;
-            return "computer";
-        }
+            else {
+                computerScore++;
+                return "computer";
+            }
+        } 
     }
 
-    for (let i = 1; i <= 5; i++) {
+    let roundPlayed = 0;
+    while (roundPlayed < 5) {
         const playerSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
-        console.log(playRound(playerSelection, computerSelection));
-        
-    } const results = getWinner(); console.log(results)
+        if (playerSelection) {
+            console.log(playRound(playerSelection, computerSelection));
+            roundPlayed ++;
 
+        } else {console.log("Invalid Option Try Again");}
+
+    } getWinner();
 };
 
 playGame()
