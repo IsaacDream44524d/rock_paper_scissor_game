@@ -1,4 +1,4 @@
-const choices = ["rock", "paper", "scissor"];
+const choices = ["rock", "paper", "scissor"].sort(() => Math.random - 0.5);
 
 let getHumanChoice = function () {
     let userChoice = prompt("What's it gonna be? Rock, Paper or Scissor").toLowerCase();
