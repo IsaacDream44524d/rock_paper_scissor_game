@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(game-assets/background/rombo-tgNTW-yVMzA-unsplash.jpg)
+    no-repeat center center/cover fixed;
+    color: whitesmoke;
+}
+
+.computer-icon img, .human-icon img {
+    width: 70px;
+    height: auto;
+}
+
+.computer-section, .human-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hands img {
+    width: 70px;
+    height: auto;
+}
+
+.hands {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 900px;
+    height: 550px;
+    padding: 60px;
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    
+}
+
+.display-choice {
+    text-align: center;
+    background: linear-gradient(135deg, #08E8DE,#764ba2);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.hand {
+    border: 2px solid #FFC2D1;
+    padding: 10px;
+    border-radius: 10px;
+    transition: tranform 0.25s ease;
+}
+
+.hand:hover {
+    background-color: #FAE8ED;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.choice-box {
+    border: 2px solid #FFC2D1;
+    padding: 10px;
+    border-radius: 10px;
+}
