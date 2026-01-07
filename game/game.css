@@ -99,3 +99,7 @@ body {
     width: 50px;
     height: auto;
 }
+
+.option {
+    pointer-events: none;
+}
