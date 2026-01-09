@@ -1,5 +1,9 @@
-# rock_paper_scissor_game
+## Rock Paper Scissors Game 🎮
 
-This is a simple rock paper scissor game under the odin project.
-currently it is running on the browser console only.
-GUI is comming soon!
+A simple Rock Paper Scissors game built for learning and practicing JavaScript, HTML, and CSS.
+
+## ACKNOWLEDGEMENTS
+
+All images and icons used in this project are for educational and learning purposes only. I
+do not take ownership of any image used.  
+This project is non-commercial, and all rights belong to their respective owners.
