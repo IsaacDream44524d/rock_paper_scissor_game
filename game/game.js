@@ -4,6 +4,11 @@ let computerhands = document.querySelectorAll('.computer-hand');
 let displayChoiceWon = document.querySelector('.display-choice')
 let humanScore = document.querySelector('.human-score');
 let robotScore = document.querySelector('.computer-score');
+let modal = document.querySelector('#modal');
+let modalPlayerScore = document.querySelector('.player-score');
+let modalComputerScore = document.querySelector('.computer-score');
+let wintext = document.querySelector('.ok');
+let modalPlayAgain = document.querySelectorAll('.play')
 
 function play() {
   hands.forEach(hand => {
@@ -20,12 +25,18 @@ function play() {
       renderComputerChoice(computerChoice);
       //this gets the winner choice and displays it
       let choiceWon = getWinnerChoice(playerChoice, computerChoice);
-      console.log(choiceWon)
       displayChoiceWon.innerHTML = ''
       displayChoiceWon.textContent = choiceWon;
+      //this get the winner, first to reach 5 points and display on modal
+      getwinner(playerScore, computerScore)
+      // resets the game upon user request
+      resetGame(playerScore, computerScore)
     })
   })
 }
+
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissor"];
@@ -43,9 +54,6 @@ function renderComputerChoice(choice) {
     }
   })
 }
-
-let playerScore = 0;
-let computerScore = 0;
 
 function getWinnerChoice(player, computer) {
   if (player) {
@@ -71,5 +79,41 @@ function getWinnerChoice(player, computer) {
   }
 }
 
+function getwinner(firstScore, secondScore) {
+  if (firstScore === 5) {
+    modalPlayerScore.innerHTML = '';
+    modalPlayerScore.textContent = firstScore;
+    modalComputerScore.textContent = secondScore;
+    modal.style.display = 'flex';
+  }
+
+  else if (secondScore === 5) {
+    computerScore.innerHTML = '';
+    modalComputerScore.textContent = secondScore
+    modalPlayerScore.textContent = firstScore;
+    wintext.textContent = 'You Lose'
+    modal.style.display = 'flex';
+  }
+  firstScore = 0;
+  secondScore = 0;
+}
+setTimeout(getwinner, 10000);
+
+function resetGame(pScore, cScore) {
+  modalPlayAgain.forEach(item => {
+    item.addEventListener('click', () => {
+      robotScore.textContent = 0;
+      humanScore.textContent = 0;
+      modal.style.display = 'none'
+    })
+  })
+}
+
+// THINGS NEED FIXING
+// 1. The reset function is not working, i need to hard core change the scores to zero.
+// 2. When player wins, the computer score is remains five as in the div.
+
+
 play()
+
 
