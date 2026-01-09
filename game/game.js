@@ -6,7 +6,7 @@ let humanScore = document.querySelector('.human-score');
 let robotScore = document.querySelector('.computer-score');
 let modal = document.querySelector('#modal');
 let modalPlayerScore = document.querySelector('.player-score');
-let modalComputerScore = document.querySelector('.computer-score');
+let modalComputerScore = document.querySelector('#computer-score');
 let wintext = document.querySelector('.ok');
 let modalPlayAgain = document.querySelectorAll('.play')
 
