@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(game/game-assets/background/fadilah-im-2HkXcDPnGh4-unsplash.jpg)
+    no-repeat center center/cover fixed;
+}
+
+.container {
+    display: flex;
+    gap: 100px;
+}
+
+button {
+    padding: 30px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: transparent;
+    font-size: 17px;
+    transition: opacity 0.04s;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: aqua;
+    cursor: pointer;
+    opacity: 0.5;
+}
