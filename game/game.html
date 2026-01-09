@@ -18,7 +18,8 @@
       <div class="computer-choice box">
         <div class="computer-hand" data-option="paper"><img src="game-assets/icons/palm.png" alt="Paper Hand"></div>
         <div class="computer-hand" data-option="rock"><img src="game-assets/icons/fist.png" alt="Rock Hand"></div>
-        <div class="computer-hand" data-option="scissor"><img src="game-assets/icons/peace (1).png" alt="Scissor Hand"></div>
+        <div class="computer-hand" data-option="scissor"><img src="game-assets/icons/peace (1).png" alt="Scissor Hand">
+        </div>
       </div>
       <div>Score: <span class="computer-score">0</span></div>
     </div>
@@ -39,7 +40,28 @@
       </div>
     </div>
 
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <div class="won">
+          <div class="ok">You Won!</div>
+          <div class="play">&times;</div>
+        </div>
+
+        <div class="players">
+          <div>You: <span class="player-score">10</span></div>
+          <div>Computer: <span class="computer-score">5</span></div>
+        </div>
+
+        <div class="buttons">
+          <button class="play-again play">Play Again</button>
+          <a href="/index.html"><button class="quit">Quit</button></a>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+
 
 </body>
 

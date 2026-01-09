@@ -47,7 +47,7 @@ body {
     border-radius: 10px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    position: fixed;
+    
     
 }
 
@@ -102,4 +102,80 @@ body {
 
 .option {
     pointer-events: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background: #9e545e;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 400px;
+    padding-left: 10%;
+    font-size: 20px;
+}
+
+.modal .won {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+
+}
+
+.modal .players {
+    display: flex;
+    gap: 60px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+}
+
+.modal .won .ok {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal button {
+    padding: 5px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.modal .play-again:hover {
+    background-color: green;
+    cursor: pointer;
+} 
+
+.modal .quit:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.won .play {
+    font-size: 25px;
+    transition: transform 0.4s;
+}
+
+.won .play:hover {
+    color: red;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
 }
