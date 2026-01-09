@@ -118,19 +118,20 @@ body {
 }
 
 .modal {
-    background: #9e545e;
+    background: url(game-assets/background/softeeboy-am-1KkWeE6w-unsplash.jpg)
+    no-repeat center center/cover fixed;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 30px;
     min-width: 400px;
     padding-left: 10%;
     font-size: 20px;
+    color: black;
 }
 
 .modal .won {
     display: flex;
     justify-content: space-between;
-    margin-left: 70px;
-
+    margin-left: 100px;
 }
 
 .modal .players {
